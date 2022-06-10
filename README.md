@@ -5,6 +5,11 @@
 ### Nodong
 
 - Npm
+  - multer
+  - Passport
+  - sequelize
+  - Swagger
+
 
 
 
