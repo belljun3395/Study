@@ -9,6 +9,7 @@
   - Passport
   - sequelize
   - Swagger
+- Node.js 배포 준비
 
 
 
