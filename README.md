@@ -22,6 +22,7 @@
 ### ETC
 
 - 웹을 지탱하는 기술
+- TCP/IP
 - HTTPS
 - PWA
 

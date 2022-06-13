@@ -2626,7 +2626,22 @@ console.log(await foo.countBars()); // 0
 
 
 > - 변수 = sourceModel.find 의 경우 변수.getTargetModel 류를 사용할 수 있지만 변수.createTargetModel 류를 사용할 수 없다.
+>   대신 데이터변수 = 모델.create()를 통해 데이터변수를 만들고 변수.addTargetModel을 사용하면 연관 관계를 가지게 하면서 데이터를 만들 수 있다.
+>
+>   다음은 이에 관한 예시코드 이다.
+>
+>   ```js
+>   data = await Data.create({ Etitle : input.Etitle ,Esubtitle : input.Esubtitle ,Ecomment : input.Ecomment});
+>   userData.addData(data);
+>   ```
+>
+>   
+>
 > - 변수 = sourceModel.create 의 경우 변수.createTargetModel 을 사용할 수 있고 변수.getTargetModel 류도 사용할 수 있다.
+
+
+
+**연관관계인 모델 사이에서 데이터를 생성, 수정, 삭제할 때는 위의 메서드를 사용하는 것이 더 편리하다.**
 
 
 
