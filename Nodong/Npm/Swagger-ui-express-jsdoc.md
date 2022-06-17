@@ -206,6 +206,66 @@ module.exports를 통해 app.js에서 이를 구현하니 주소의 기준도 ap
 
 
 
+#### api-key 활용
+
+---
+
+api-key는 배포를 할 경우 특정 사람만 api 를 사용할 수 있도록 제한하기 위해서 사용하는 것이다.
+
+위처럼 swagger option과 components 를 통해서 사용할 인증 방법을 설정할 수 있다.
+
+그러면 아래의 사진과 같이 authorize 버튼을 만들 수 있다.
+
+![swagger_apikey](C:\Users\User\Desktop\Study\Study\Nodong\Npm\image\swagger_apikey.JPG)
+
+
+
+이 버튼에서 특정 값을 입력하면 그 값은 swagger option과 components 를 통해 설정한 곳에 저장되게 된다.
+
+```
+*    ApiKeyAuth: 
+*      type: apiKey
+*      name: api_key
+*      in: header
+```
+
+본인의 경우 다음과 같이 header에 api_key라는 이름으로 그 값을 저장했다.
+
+
+
+그러면 이렇게 저장한 값을 가지고 api_key 가 맞는지 판단해야 한다.
+
+```js
+module.exports = {
+    checkApiKey : function (req, res, next) {
+        consoleHash('check APIKey :' + req.headers.api_key)
+        
+        const api_key = req.headers.api_key;
+        if (api_key && api_key === "nanakim") { 
+            next();
+        } else {
+            res.sendStatus(401);
+        }
+    }
+}
+```
+
+위의 코드처럼 간단히 api_key가 맞는지 확인하는 함수를 만들면 된다.
+
+
+
+이렇게 만든 함수는 아래와 같이 활용할 수 있다.
+
+```js
+router.post('/login', checkApiKey, verifyCookieToken, authenticate );
+```
+
+
+
+올바른 api_key 값이 들어오면 api 를 활용할 수 있고 그렇지 않으면 활용하지 못하게 된다.
+
+
+
 ### Swagger Editor 활용
 
 ---
