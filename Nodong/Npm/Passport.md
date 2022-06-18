@@ -283,6 +283,8 @@ var stack = this._serializers;
 
 이때 `user`은 `passport.authenticate` 메서드에서 전략을 수행한 후 전달 받은 유저의 정보를 가지고 있는 객체이다. 
 
+( `user` 은 passport-local에서의 `if (result) { done(null, exUser); }` 를 통해 전달된 정보이다. )
+
 
 
 > **즉 `passport.serializeUser` 은 다음과 같이 정리할 수 있다.**
