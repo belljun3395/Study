@@ -202,7 +202,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 options의 apis의 주소이다.
 
-module.exports를 통해 app.js에서 이를 구현하니 주소의 기준도 app.js가 된다는 것을 명심하자!
+app.use 혹은 router.use 를 통해 미들웨어로 등록되어 주소의 기준도 app.js가 된다는 것을 명심하자!
 
 
 

@@ -2800,4 +2800,3 @@ Foo.belongsToMany(Bar, { through: 'foo_bar', sourceKey: 'name', targetKey: 'titl
 <a href=https://sequelize.org/docs/v6/getting-started/>https://sequelize.org/docs/v6/getting-started/</a></br>
 <a href=https://jaehoney.tistory.com/141?category=869692>https://jaehoney.tistory.com/141?category=869692</a>
 </details>
-
