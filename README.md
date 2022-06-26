@@ -33,4 +33,5 @@
 - TCP/IP
 - HTTPS
 - PWA
+- 비동기처리(js)
 
