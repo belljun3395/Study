@@ -9,7 +9,14 @@
   - Passport
   - sequelize
   - Swagger
+  - PM2
 - Node.js 배포 준비
+
+
+
+### Hairlog
+
+- ~1주차
 
 
 
