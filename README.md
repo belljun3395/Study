@@ -9,7 +9,15 @@
   - Passport
   - sequelize
   - Swagger
+  - PM2
 - Node.js 배포 준비
+
+
+
+### HairLog
+
+- ~1주차
+- **2주차**
 
 
 
@@ -26,4 +34,5 @@
 - TCP/IP
 - HTTPS
 - PWA
+- **XSS**
 
