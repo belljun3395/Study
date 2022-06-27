@@ -23,7 +23,7 @@
 
 ### JavaStudy
 
-- Ground : 자바의 정석 정리
+- Ground : 자바의 정석 정리 // 꾸준한 복습 필요
 
 
 
