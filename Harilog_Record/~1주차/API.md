@@ -446,4 +446,3 @@ var record = await userInstance.createRecord({ date, cost, time, category, etc, 
 
 위와 같이 sequelize가 연관관계가 있을 때 자동으로 제공하는 메서드를 사용한 이유는 하드코딩을 할 때 발생할 수 있는 실수를 방지하기 위해서이다.
 
-**하지만 추후에 sequelize를 사용하는 것이 아닌 sql query 문을 활용하여 다시 코드를 작성하는 것도 좋을 것 같다.**
